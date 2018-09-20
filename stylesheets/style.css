@@ -1,0 +1,79 @@
+/* CSS Document */
+
+
+/*((((((((((((((((((((((((((((((((
+Basic Structure
+))))))))))))))))))))))))))))))))*/
+#wrapper{
+	width: 960px;
+	padding: 5px;
+	margin: 20px auto;
+}
+#header{
+	height: 100px;
+}
+#content{
+	float: right;
+	width: 300px;
+}
+#sidebar{
+	float: left;
+	width:  100px;
+}
+#footer{
+	clear: both;
+}
+
+/*((((((((((((((((((((((((((((((((
+Colors and Fonts
+color.adobe.com
+))))))))))))))))))))))))))))))))*/
+
+body{
+	color: black;
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	background-image: url("../images/background.jpg");
+	/*background-size: cover;*/
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+#header, #sidebar, #content, #footer{
+	/*background-color:#000cad;*/
+	background-color:rgba(0,12,173,0.3);  
+	margin-bottom: 4px;
+	border: double;
+	border-radius: 8px;
+	/*border-color: #000760;*/
+	padding-left: 4px;
+	padding-right: 20px;
+	
+}
+
+/*(((((((((((((((((((((((((((((((((
+
+Responsive design
+
+)))))))))))))))))))))))))))))))))*/
+
+@media screen and (max-width:980px){
+	
+
+}
+
+@media screen and (max-width:700px){
+	
+
+}
+
+@media screen and (max-width:480px){
+	
+
+}
+
+
+/* Phones */
+@media only screen
+	and(min-device-width: 320px)
+	and(max-device-width: 560px)
+
