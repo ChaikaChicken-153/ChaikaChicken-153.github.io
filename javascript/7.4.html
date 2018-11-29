@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+	while(true){
+		var score = eval(prompt("what was your grade on last math test?"));
+		if( score < 0 ){
+			alert("Error. Grade cannot be less than 0");
+			continue;
+		}
+		if( score >= 98)
+			{ alert("Good job. You get the A+. Stand for the good job like the doctor or the lawyer."); }
+		else if( score >= 93)
+			{alert("You did the average. Could have gotten the better. You need to do better next time. "); }
+		else if( score >= 90)
+			{ alert("You performed below average. If you develop the bad habit, you will not get the good job. "); }
+		else if(score >= 80)
+			{ alert("You did the very bad. You keep on doing this, I remove you from the private school."); }
+		else if(score >= 70)
+			{ alert("YOU GOT THE C??? YOU CANNOT EAT THE DINNER TONIGHT. I MADE THE KUNG PAO CHICKEN WITH FRIED RICE TODAY."); }
+		else if(score >= 60)
+			{alert("YOU GOT THE D?????? KEEP ON STUDY AT SCHOOL UNTIL YOU GET THE A+. DO NOT GO HOME TONIGHT."); }
+		else 
+			{alert("YOU GOT THE F???????? EVEN THE MONKEY CAN GET THE BETTER SCORE. YOU ARE FAILURE TO THE HUMAN SOCIETY. I DO NOT WANT TO SEE YOU AGAIN."); }
+		var m = confirm("Do you want to enter another score?")
+		if (!m) {
+			break;
+		}
+	}
+	</script>
+</body>
+</html>

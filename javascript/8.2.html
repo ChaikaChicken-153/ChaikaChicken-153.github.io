@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+	
+</head>
+
+<body>
+<script type="text/javascript">
+var Mayonez = {
+	mayonez: 0,
+	click: function() {
+		this.mayonez++;
+		if(typeof(Storage) !== "undefined") {
+			localStorage.setItem("mayonez", this.mayonez);
+			
+		}else {
+			console.log("sorry, your browser is too captilist for this");
+		}
+		this.update_screen();
+	},
+	update_screen: function() {
+		document.getElementById("output").innerHTML = this.mayonez;
+	},
+	init: function(){
+		if(typeof(Storage) !== "undefined"){
+			console.log("Your browser supports localStorage")
+			var m = localStorage.getItem("mayonez");
+			console.log(m);
+			if(m != null) {
+				Mayonez.mayonez = Number(m);
+				Mayonez.update_screen();
+			}
+		} else {
+			console.log("Sorry, your browser is too captlist.");
+		}
+	}
+	
+}
+		window.onload = function() {
+			Mayonez.init();
+			console.log("loading...");
+		};
+	</script>
+	<a href="JavaScript:Mayonez.click();"><img src="../images/mayonez.jpg"></a>
+	<p id="output">0</p>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7.8 - Room Service</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var now = new Date();
+		now = now.getHours();
+		document.write(now);
+		// bonus + 2, automatically detect what time it is instead of asking
+		/*var now = prompt("what time?")
+		now = parseInt(now)*/
+	
+		switch(now){
+	
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+			alert("Continental breakfast is served in the lobby");
+				break;
+			case 11:
+			case 12:
+			case 13:
+			case 14:
+				alert("The restaurant is open");
+				var c = confirm("Do you want to make a reservation?")
+				if (c) {
+					alert("You are reserved for 2:00")
+				}
+				else {
+					break;
+				}
+				break;
+			case 17:
+			case 18:
+			case 19:
+			case 20:
+			case 21:
+				alert("You can order room service or visit the restaurant")
+				break;
+			default:
+				alert("Wait or get a snack")
+			
+	
+		
+		
+				
+				
+				
+				
+				
+				
+				  }
+		/* use a switch:
+		switch
+			// 1 am
+			case 1:
+			case 2:
+			case 3:
+			
+			// 2pm
+			case 14:
+			case 15:
+		*/
+
+	</script>
+</body>
+</html>

@@ -14,11 +14,11 @@ Basic Structure
 }
 #content{
 	float: right;
-	width: 300px;
+	width: 600px;
 }
 #sidebar{
 	float: left;
-	width:  100px;
+	width:  300px;
 }
 #footer{
 	clear: both;
@@ -33,8 +33,8 @@ body{
 	color: black;
 	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 	background-image: url("../images/background.jpg");
-	background-size: cover;
-	background-repeat:no-repeat;             
+	/*background-size: cover;
+	background-repeat:no-repeat; */            
 }
 
 #header, #sidebar, #content, #footer{
@@ -45,7 +45,7 @@ body{
 	border-radius: 8px;
 	/*border-color: #000760;*/
 	padding-left: 4px;
-	padding-right: 20px;
+	padding-right: 4px;
 	
 }
 
@@ -56,16 +56,32 @@ Responsive design
 )))))))))))))))))))))))))))))))))*/
 
 @media screen and (max-width:980px){
-	
-
+	#wrapper{
+		width: 94%;	
+	}
+	#content{
+		width: 65%;
+	}
+	#sidebar{
+		width: 30%;
+	}
 }
 
 @media screen and (max-width:700px){
-	
+	#content, #sidebar {
+		width: auto;
+			float: none
+	}
+	#header{
+		height: auto
+	}
 
 }
 
 @media screen and (max-width:480px){
+	h1{
+		font-size: 24px;
+	}
 	
 
 }
@@ -73,6 +89,24 @@ Responsive design
 
 /* Phones */
 @media only screen
-	and(min-device-width: 320px)
-	and(max-device-width: 560px)
+	and (min-device-width: 320px)
+	and (max-device-width: 560px){
+		body{
+			font-size: 40px;
+		}
+		#header{
+			height: auto;
+		}
+		#content{
+			width: auto;
+		}
+		#sidebar{
+			width: auto;
+			clear: both;
+		}
+		#header, #sidebar, #content, #footer{
+		border-radius: 16px;
+		border-width: 8px;
+}
+}
 

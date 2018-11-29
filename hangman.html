@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<link rel="stylesheet"
+type="text/css"
+href="stylesheets/hangman.css">
+	<script>
+	var name = prompt("What is name Comrade?");
+	var words =[
+		"polikarpov",
+		"petlyakov",
+		"vladimir",
+		"putin",
+		"henschel",
+		"porsche",
+		"konigstiger",
+		"jadpanzer",
+		"jagdpanther",
+		"jagdtiger",
+		"tiger",
+		"panther",
+		"maus",
+		"lowe",
+		"sturmgeschutz",
+		"ferdinand",
+		"lee",
+		"sherman",
+		"calliope",
+		"wolverine",
+		"hellcat",
+		"jackson",
+		"priest",
+		"pershing",
+		"katyusha",
+		"taran",
+		"joseph",
+		"stalin",
+		"kliment",
+		"voroshilov",
+		"cruiser",
+		"crusader",
+		"cromwell",
+		"comet",
+		"centurion",
+		"tog",
+		"churchill",
+		"tortoise",
+		"dauntless",
+		"devastator",
+		"mustang",
+		"corsair",
+		"thunderbolt",
+		"lightning",
+		"chaika",
+		"chicken",
+		"peshka",
+		"uhu",
+		"stuka",
+		"schwalbe",
+		"wurger",
+		"spitfire",
+		"hurricane",
+		"lancaster",
+		"halifax",
+		"seafire",
+		"supermarine",
+		"hawker",
+		"messerschmitt",
+		"fockewulf",
+		"yakolev",
+		"lavochkin",
+		"mikoyan",
+		"boeing",
+		"pancake",
+		"zero",
+		"fortniteisded",
+		"adidas",
+		"scott",
+		"bayerischeflugzeugwerke",
+		"bayerischemotorenwerke",
+		"daimlerbenz"
+		
+	];
+		var word = words[Math.floor(Math.random() * words.length)];
+		var lives = 10;
+		var answerArray = [];
+		for(var i = 0; i < word.length; i++) {
+			answerArray[i] = "_";
+		}
+		
+		var remainingLetters = word.length;
+		
+		while(remainingLetters > 0) {
+			alert(answerArray.join(" "));
+			
+			var guess = prompt("Guess a letter, or click Cancel to stop playing.");
+				guess = guess.toLowerCase();
+			if (guess === null) {
+				break;
+			} else if (guess.length !== 1) {
+				alert("ONE LETTER BLIN.");
+			} else {
+				var counter = 0;
+				for(var j = 0; j < word.length; j++) {
+					if (word[j] === guess) {
+						answerArray[j] = guess;
+						remainingLetters--;}
+					else {
+						counter++;
+					}
+					}
+				
+				if(counter == word.length)
+					{
+						lives--;
+						alert("You have " + lives + " remaining.")
+					}
+						if(lives == 0){
+							alert(name + ", You are dissapointment to motherland. You squat like captlist and eat captlist mayonez. 1,000,000,000 years sentence to Gulag.");
+							Application.close();
+						}
+						}
+					}
+	alert(answerArray.join(" "));
+	alert("Da " + name + "! The answer was " + word + ". Now go collect sekrit dokiments for motherland or squat at Babushka's house and watch documentary.");
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* CSS Document */
+body{
+	background-image: url("../images/hangman.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
